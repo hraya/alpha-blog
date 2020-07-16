@@ -1,0 +1,8 @@
+  <% if @article.errors.any? %>
+    <h2 class="text-danger"> The following errors prevented the article from being saved </h2>
+    <ul class="text-danger">
+      <% @article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
